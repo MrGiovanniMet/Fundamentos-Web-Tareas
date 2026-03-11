@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- Dos formas de aplicar JS una aqui y otra como css y lo jalamos
+ recomendado es justo al final del body la mayoria de los scripts
+ -->
+
+    <h1>Hola Mundo</h1>
+    <h2>Hola Mundo</h2>
+    <h1 id="elemento">Hola Mundo2</h1>
+    <h1>Hola Mundo3</h1>
+    <h1 class="texto">Hola Mundo4</h1>
+    <h1>Hola Mundo5</h1>
+    <h2 class="texto">Hola Mundo6</h2>
+    <p class="texto"></p>
+    <div>
+        <p>Te amo Liz</p>
+    
+    </div>
+
+    <div id="div1">
+        <p> Liz te amo </p>
+        
+    </div>
+    <a href="#">google</a>
+    <img src="" alt="Imagen">
+
+<!--
+ <script>
+    /*
+    const a =2;
+        const b =3;
+        const c = a + b;
+        console.log(c);
+        alert("Hola mundo desde una funcion");
+    
+    */
+    function saludar(){
+        const a =2;
+        const b =3;
+        const c = a + b;
+        //console.log(c);
+        alert("Hola mundo desde una funcion");
+        return c;
+    }
+    
+</script> 
+
+
+<script src="script.js"></script>
+-->
+<script>
+    //  query selector obtiene el primer q se encuentra
+    // las reglas de selectores de css son las mismas aqui
+    /*
+    const h1 = document.querySelector("h1");
+    console.log(h1);
+    */
+    const h2 = document.querySelector("h2");
+    h2.textContent = "Te extraño Liz";
+    console.log(h2);
+    
+    
+    // mientras q All regresa todos en una lista 
+   const elementos = document.querySelectorAll("h1");
+   console.log(elementos);
+
+   
+    const h1 = document.getElementById("elemento");
+    h1.textContent = "Te amo Lizeth";
+    console.log(h1);
+    
+    const elementos2 = document.getElementsByClassName("texto");
+    console.log(elementos2);
+
+    // editar css jajsajs
+    const a = document.querySelector("a");
+    a.href  = "https://google.com.mx/";
+    const img = document.querySelector("img");
+    img.src = "https://picsum.photos/200/300";
+    
+    function createElement(){
+        const div1 = document.getElementById("div1");
+        const p = document.createElement("p");
+        p.textContent = "Te amo Liz";
+        div1.appendChild(p);
+
+    }
+    function removeElement(){
+    const div1 = document.getElementById("div1");
+    const p = div1.querySelector("p");
+    div1.removeChild(p);
+} 
+
+    createElement();
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+accedemos a inspeccionar 
+accedemos a la consola de javascript y escribimos el siguiente codigo
+const a =2;
+enter despues de cada valor
+const b =3;
+const c = a + b;
+console.log(c);
+alert("Hola mundo ");
+no usar alert en paginas web reales, es solo para pruebas
+Lenguaje de programacion ligero interpretado, orientado a objetos y basado en prototipos. Es un lenguaje de programación que se utiliza principalmente para el desarrollo web, aunque también se puede usar para crear aplicaciones de escritorio y móviles. JavaScript es un lenguaje de programación muy popular y ampliamente utilizado en la industria del desarrollo web, y es compatible con la mayoría de los navegadores web modernos. Con JavaScript, los desarrolladores pueden crear sitios web interactivos y dinámicos, así como aplicaciones web complejas y sofisticadas.
+Todos lo soportan los nav web
+
+lo usan angular, react frameworks
+nodejs para el backend
+nosotros usaremos Vanilla JS   es decir puro no usando frameworks
+
+JavaScript es un lenguaje de programación basado en prototipos, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa.
+Generalmente es utilizado por múltiples librerías de web frontend como Angular o React. 
+
+
+node es para el lado back ->server
+browser es para el lado front ->cliente
+
+deshabilitar js en el navegador con 
+-->
