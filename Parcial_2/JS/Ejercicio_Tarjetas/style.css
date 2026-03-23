@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  background-color: black;
+  font-family: sans-serif;
+  padding: 30px 20px;
+}
+ 
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+ 
+.menu {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+ 
+.entrada {
+  flex: 1;
+  padding: 9px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+ 
+.agregar {
+  padding: 9px 14px;
+  font-size: 14px;
+  background-color: rgb(187, 187, 7);
+  color: white;
+  border-radius: 4px;
+}
+ 
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+ 
+.textop{
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+ 
+.controles {
+  background: rgb(14, 0, 0);
+  padding: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+ 
+
+ 
+.borrar {
+  flex: 1;
+  padding: 7px;
+  font-size: 13px;
+  background: #860202;
+  color: white;
+  border-radius: 4px;
+}
