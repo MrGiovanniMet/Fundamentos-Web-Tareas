@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+
+    <h1>Catálogo de Productos</h1>
+
+    <div id="filtros">
+        <button class="filtro activo" data-categoria="todas">Todas</button>
+        <button class="filtro" data-categoria="vacunas">Vacunas</button>
+        <button class="filtro" data-categoria="medicamentos">Medicamentos</button>
+        <button class="filtro" data-categoria="higiene">Higiene</button>
+    </div>
+
+    <div id="productos"></div>
+
+    <script src="./productos.js"></script>
+    <script src="./catalogo.js"></script>
+</body>
+</html>

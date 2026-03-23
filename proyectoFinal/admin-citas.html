@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Citas</title>
+  <link rel="stylesheet" href="./citas.css" >
+</head>
+
+<body>
+
+  <h1>Gestión de Citas</h1>
+  <p id="bienvenida"></p>
+  <button id="btnLogout">Cerrar sesión</button>
+
+  <hr>
+
+  <div id="stats">
+    <span>Total: <strong id="statTotal">0</strong></span>
+    <span>Pendientes: <strong id="statPendientes">0</strong></span>
+    <span>Confirmadas: <strong id="statConfirmadas">0</strong></span>
+    <span>Canceladas: <strong id="statCanceladas">0</strong></span>
+  </div>
+
+  <hr>
+
+  <div id="filtros">
+    <button class="filtro activo" data-f="todas">Todas</button>
+    <button class="filtro" data-f="pendiente">Pendientes</button>
+    <button class="filtro" data-f="confirmada">Confirmadas</button>
+    <button class="filtro" data-f="cancelada">Canceladas</button>
+  </div>
+
+  <table id="tablaCitas">
+    <thead>
+      <tr>
+        <th>Mascota</th>
+        <th>Usuario ID</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Motivo</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tbodyCitas"></tbody>
+  </table>
+
+  <script src="auth.js"></script>
+  <script src="citas.js"></script>
+  <script src="citas-admin.js"></script>
+</body>
+
+</html>
