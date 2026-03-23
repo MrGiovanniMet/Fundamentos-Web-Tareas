@@ -1,4 +1,4 @@
-// citas.js — Datos de citas en localStorage (reemplaza con fetch() cuando tengas backend)
+// BD no hay 
 
 const CitasDB = {
   _KEY: "vetCitas",

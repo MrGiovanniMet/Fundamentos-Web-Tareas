@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+    <style>
+    
+    .contenedor{
+        width: 100vw;
+        background-color: aqua;
+
+    }
+
+    .elemento{
+        width: 33%;
+        height: 200px;
+        float: left;
+    }
+
+    .elemento1{
+        background-color: red;
+        
+    }
+
+    .elemento2{
+        background-color: blue;
+        
+    }
+
+    .elemento3{
+        background-color: green;
+    
+    }
+
+    @media (width <=375px) {
+            .elemento {
+                width: 100%;
+            }
+ 
+            .elemento2 {
+                display: none;
+            }
+        }
+ 
+        @media (376px <= width <= 768px) {
+            .elemento1 {
+                width: 50%;
+                background-color: black;
+            }
+ 
+            .elemento2 {
+                width: 50%;
+            }
+ 
+            .elemento3 {
+                width: 100%;
+            }
+        }
+ 
+        @media (width >=769px) {
+            .elemento {
+                width: 33%;
+            }
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div class="contenedor">
+        <div class = "elemento elemento1"> Elemento 1</div>
+        <div  class="elemento elemento2"> Elemento 2</div>
+        <div class="elemento elemento3"> Elemento 3</div>
+
+    </div>
+
+</body>
+</html>
