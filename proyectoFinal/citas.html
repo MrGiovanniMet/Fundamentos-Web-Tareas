@@ -9,36 +9,7 @@
 <body>
 
   <h1>Mis Citas</h1>
-  <p id="bienvenida"></p>
   <button id="btnLogout">Cerrar sesión</button>
 
-  <hr>
-
-  <h2>Agendar nueva cita</h2>
-  <form id="formCita">
-    <label>Nombre de la mascota
-      <input type="text" id="nombreMascota" placeholder="Ej. Max" required/>
-    </label>
-    <label>Fecha
-      <input type="date" id="fecha" required/>
-    </label>
-    <label>Hora
-      <input type="time" id="hora" required/>
-    </label>
-    <label>Motivo
-      <textarea id="motivo" placeholder="Describe el motivo…" required></textarea>
-    </label>
-    <button type="submit">Agendar</button>
-    <p id="msgOk" class="oculto">✅ Cita agendada. Espera confirmación.</p>
-  </form>
-
-  <hr>
-
-  <h2>Mis citas registradas</h2>
-  <div id="listaCitas"></div>
-
-  <script src="auth.js"></script>
-  <script src="citas.js"></script>
-  <script src="citas-cliente.js"></script>
 </body>
 </html>

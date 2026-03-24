@@ -1,6 +1,6 @@
 
 
-/*prueba*/
+/*prueba  cuando se vea php y la conexion con workbench o algo aca pongo las peticiones */
 const usuarios = [
     { id: 1, nombre: "Ana García",  email: "ana@gmail.com",   password: "1234",  rol: "cliente" },
     { id: 2, nombre: "Luis Pérez",  email: "luis@gmail.com",  password: "1234",  rol: "cliente" },
