@@ -11,7 +11,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+a{
+    text-decoration: none;
+}
 
 
 .form-container {
@@ -23,6 +25,8 @@ body {
     background-color: black;
     color: white;
 }
+
+
 
 .form-group {
     display: flex;
@@ -65,7 +69,25 @@ button {
     text-align: center;
     font-size: 14px;
     margin-top: 16px;
+    color: rgb(207, 13, 13);
 }
+
+
+.tabla-titulo {
+  margin-top: 24px;
+}
+
+.tabla-horarios {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-horarios th,
+.tabla-horarios td {
+  border: 1px solid #000;
+  padding: 8px;
+}
+
 
 @media(width < 767px) {
     body {
@@ -83,3 +105,4 @@ button {
     }
 
 }
+

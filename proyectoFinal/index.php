@@ -1,3 +1,7 @@
+<?php
+session_start();  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,28 +24,51 @@
         </div>
         <div class="logo"> Veterinaria El Buen Amigo</div>
 
-        <!-- para enlaces -->
+
+        <?php if (isset($_SESSION['email'])) { ?>
         <button id="boton" class="menu-toggle" onclick="toggleMenu()">☰</button>
         <nav>
             <a id="serv" href="#" onclick="toggleServicios()"> Servicios ▽ </a>
             <nav id="submenu-servicios">
-                <a  href="./login.html">Consulta General</a>
-                <a  href="./catalogo.html">Vacunas</a>
-                <a href="./login.html">Cirugía</a>
+            <!-- Para no mostrar lo mismo al admin que al user normal-->
+                <?php if ($_SESSION['role'] == 'admin') { ?>
+                <a href="./admin-citas.php">Administrar Citas</a>
+                <a href="./admin-productos.php">Administrar Productos</a>
+                <?php } 
+                else { ?>
+                <a href="./agendarcitas.php">Agendar Cita</a>
+                <a href="./citas.php">Mis Citas</a>
+                <a href="./tienda.php">Comprar Productos</a>
+                <a href="./historial.php">Historial de Compras</a>
+                <?php } ?>
+                <a href="./Db/logout.php">Cerrar Sesión</a>
             </nav>
-            <a href="./login.html"> Iniciar Sesion</a>
-            <a   href="./registro.html"> Registrarse</a>
         </nav>
-        <a  class="link" href="./login.html"> Cita de Emergencia </a>
+
+        <?php } 
+        
+        else { ?>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav>
+            <a href="./login.php">Iniciar Sesión</a>
+            <a href="./registro.php">Registrarse</a>
+        </nav>
+        <?php } ?>
+
+        <a class="link" href="./emergencia.html"> Cita de Emergencia </a>
 
     </header>
     <main class="contenedor">
         <div class="parr">
             <p class="anim">
-                ¡Bienvenido a Veterianaria el Buen Amigo! Recibe 50% de descuento en tu primera consulta y conoce
+                <a href="./agendarcitas.php" >
+                ¡Bienvenido a Veterianaria el Buen Amigo! Recibe 100% de descuento en tu primera consulta y conoce
                 nuestro cuidado médico
                 integral.
+                </a>
+            
             </p>
+            
         </div>
         <div class="cont2">
             <div class="texto">
@@ -97,8 +124,9 @@
                 <p>
                     ¿Le estás dando la comida correcta a tu gato?
                     <br><br>
+                    
                     Probablemente no
-
+                    
                     El gato es uno de los animales más malentendidos en cuanto a nutrición. Muchos dueños les dan
                     croquetas de perro, sobras de comida o leche de vaca pensando que está bien, y en realidad eso puede
                     causar desde problemas digestivos hasta enfermedades renales a largo plazo. Los gatos son carnívoros
@@ -134,7 +162,7 @@
                     <li>🐕 <strong>Boxer</strong> — juguetón, protector y con una energía que no para</li>
                     <li>🐕 <strong>Mastín</strong> — imponente por fuera, un bebé por dentro</li>
                     <li>🐕 <strong>Akita</strong> — reservado, majestuoso y de una lealtad sin igual</li>
-                      <br>
+                    <br>
                     <li>Y muchos mas...</li>
                 </ul>
                 <br>

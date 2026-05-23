@@ -1,0 +1,24 @@
+
+
+h1 {
+    font-size: 70px;
+    color: red;
+}
+
+.mensaje {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+body{
+    background-color: black;
+}
+
+p{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
