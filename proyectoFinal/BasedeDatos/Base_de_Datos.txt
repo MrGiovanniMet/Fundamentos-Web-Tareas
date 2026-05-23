@@ -1,0 +1,12 @@
+Base de datos utilizada consta de 5 tablas 
+usuarios 
+citas
+ventas
+productos
+horarios
+
+La relacion es mediante el id del usuario en las citas y 
+en los productos en cuanto a horarios y citas la relacion es mediante un id
+
+Nombre de la bd:
+ veterinaria
